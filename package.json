@@ -1,0 +1,21 @@
+{
+  "name": "calc",
+  "version": "0.1.0",
+  "description": "A CLI calculator",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "calc": "src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.13",
+    "typescript": "^5.8.3"
+  }
+}
