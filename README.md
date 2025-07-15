@@ -4,12 +4,12 @@ A simple Node.js TypeScript CLI app that implements some basic calculator featur
 
 **Usage:**
 
-Accepts up to `3` args. `[number1] [operator: + - * /] [number2]`.
+Accepts math input to compute. `"[number1] [operator: + - * /] [number2]"`.
 
 **Example:**
 
 ```shell
-npm start 123 + 4
+npm start "123 + 4"
 ```
 
 **Run tests once:**

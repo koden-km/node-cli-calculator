@@ -8,5 +8,5 @@ const userArgs: string[] = args.slice(2);
 if (userArgs.length === 0) {
   showHelp();
 } else {
-  console.log(calc(userArgs));
+  console.log(calc(userArgs.join(" ").trim()));
 }

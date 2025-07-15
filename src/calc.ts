@@ -1,9 +1,9 @@
-export function calc(args: string[]): number {
-  if (args.length === 0) {
+export function calc(input: string): number {
+  if (input.length === 0) {
     return 0;
   }
 
-  const [aStr, op, bStr] = args;
+  const [aStr, op, bStr] = input.split(" ");
   const a = Number(aStr);
   const b = Number(bStr);
 
@@ -25,9 +25,9 @@ export function calc(args: string[]): number {
 
 export function showHelp() {
   console.log("Calculator");
-  console.log("  calc [arg1] [operator] [arg2]\n");
-  console.log("Usage example:");
-  console.log("> calc 123 + 4");
+  console.log('  "[arg1] [operator] [arg2]"\n');
+  console.log("Example:");
+  console.log('  "123 + 4"');
 }
 
 function add(a: number, b: number): number {
