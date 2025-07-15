@@ -1,16 +1,29 @@
-// console.log(process.argv);
-
-export function calc(args: string[]) {
+export function calc(args: string[]): number {
   if (args.length === 0) {
-    showHelp();
-    return;
+    return 0;
   }
 
-  console.log("calculating using args:", args);
-  console.log("...TODO...");
+  const [aStr, op, bStr] = args;
+  const a = Number(aStr);
+  const b = Number(bStr);
+
+  if (isNaN(a) || isNaN(b)) return NaN;
+
+  switch (op) {
+    case "+":
+      return add(a, b);
+    case "-":
+      return subtract(a, b);
+    case "*":
+      return multiply(a, b);
+    case "/":
+      return divide(a, b);
+  }
+
+  return NaN;
 }
 
-function showHelp() {
+export function showHelp() {
   console.log("Calculator");
   console.log("  calc [arg1] [operator] [arg2]\n");
   console.log("Usage example:");
@@ -23,4 +36,12 @@ function add(a: number, b: number): number {
 
 function subtract(a: number, b: number): number {
   return a - b;
+}
+
+function multiply(a: number, b: number): number {
+  return a * b;
+}
+
+function divide(a: number, b: number): number {
+  return a / b;
 }
